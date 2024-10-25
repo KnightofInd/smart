@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/client';
 import client from './apollo'; // Make sure this path matches your apollo.js location
 import Navbar from './components/navbar';
 import RegisterPage from './pages/register';
+import dashbaord from './pages/dashboard';
 import './index.css';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/dashboard" element={<dashbaord />} />
             </Routes>
           </main>
         </div>
