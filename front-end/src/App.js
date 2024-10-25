@@ -7,6 +7,7 @@ import RegisterPage from './pages/register';
 import LoginPage from './pages/login';
 import Dashboard from './pages/dashboard';
 import  StudentAnalytics from './components/student_analytics';
+import EducationalChatbot from './pages/chatbot';
 import './index.css';
 
 // Protected Route Component
@@ -31,6 +32,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Analytics" element={<StudentAnalytics />} />
+              <Route path="/Chatbot" element={<EducationalChatbot/>} />
               
               {/* Auth Routes */}
               <Route 

@@ -4,6 +4,7 @@ import { gql, useQuery } from '@apollo/client';
 import { LogOut, BookOpen, Users, Calendar, Clock, Mail, Phone, Home, GraduationCap, Briefcase } from 'lucide-react';
 import DocumentUploadSection from '../components/documentuploadsection';
 import StudentAnalytics from '../components/student_analytics';
+import EducationalChatbot from './chatbot';
 
 
 // GraphQL Queries
@@ -269,6 +270,9 @@ const Dashboard = () => {
               </div>
             </div>
             <StudentAnalytics />
+            <div className="w-full max-w-4xl mx-auto my-8">
+  <EducationalChatbot />
+</div>
           </div>
         </div>
       </div>
