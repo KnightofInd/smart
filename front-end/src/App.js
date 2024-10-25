@@ -6,7 +6,8 @@ import Navbar from './components/navbar';
 import RegisterPage from './pages/register';
 import LoginPage from './pages/login';
 import Dashboard from './pages/dashboard';
-import  StudentAnalytics from './components/student_analytics';
+import About from './pages/about';
+import StudentAnalytics from './components/student_analytics';
 import EducationalChatbot from './pages/chatbot';
 import './index.css';
 
@@ -22,6 +23,46 @@ const AuthRoute = ({ children }) => {
   return !isAuthenticated ? children : <Navigate to="/dashboard" />;
 };
 
+// Home Component
+const Home = () => (
+  <div className="container mx-auto px-4 py-8">
+    <div className="max-w-3xl mx-auto text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        Welcome to SmartEdu
+      </h1>
+      <p className="text-lg text-gray-600 mb-8">
+        Your comprehensive platform for educational excellence
+      </p>
+      <div className="flex justify-center gap-4">
+        <a
+          href="/register"
+          className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
+        >
+          Get Started
+        </a>
+        <a
+          href="/about"
+          className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+);
+
+// Contact Component
+const Contact = () => (
+  <div className="container mx-auto px-4 py-8">
+    <div className="max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h1>
+      <p className="text-gray-600">
+        Get in touch with us for any questions or support.
+      </p>
+    </div>
+  </div>
+);
+
 const App = () => {
   return (
     <ApolloProvider client={client}>
@@ -32,7 +73,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Analytics" element={<StudentAnalytics />} />
-              <Route path="/Chatbot" element={<EducationalChatbot/>} />
+              <Route path="/Chatbot" element={<EducationalChatbot />} />
               
               {/* Auth Routes */}
               <Route 
@@ -75,55 +116,5 @@ const App = () => {
     </ApolloProvider>
   );
 };
-
-// Placeholder components for other routes
-const Home = () => (
-  <div className="container mx-auto px-4 py-8">
-    <div className="max-w-3xl mx-auto text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">
-        Welcome to SmartEdu
-      </h1>
-      <p className="text-lg text-gray-600 mb-8">
-        Your comprehensive platform for educational excellence
-      </p>
-      <div className="flex justify-center gap-4">
-        <a
-          href="/register"
-          className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
-        >
-          Get Started
-        </a>
-        <a
-          href="/about"
-          className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
-        >
-          Learn More
-        </a>
-      </div>
-    </div>
-  </div>
-);
-
-const About = () => (
-  <div className="container mx-auto px-4 py-8">
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 mb-4">About Us</h1>
-      <p className="text-gray-600">
-        SmartEdu is dedicated to providing quality education through innovative technology.
-      </p>
-    </div>
-  </div>
-);
-
-const Contact = () => (
-  <div className="container mx-auto px-4 py-8">
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h1>
-      <p className="text-gray-600">
-        Get in touch with us for any questions or support.
-      </p>
-    </div>
-  </div>
-);
 
 export default App;
