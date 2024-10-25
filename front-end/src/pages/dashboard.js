@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { gql, useQuery } from '@apollo/client';
 import { LogOut, BookOpen, Users, Calendar, Clock, Mail, Phone, Home, GraduationCap, Briefcase } from 'lucide-react';
+import DocumentUploadSection from '../components/documentuploadsection';
+
 
 // GraphQL Queries
 const GET_STUDENT_DETAILS = gql`
@@ -239,7 +241,11 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-
+               {/* Document Upload Section - Only show for students */}
+               {userType === 'student' && (
+              <DocumentUploadSection studentId={userData?.student_id} />
+            )}
+            
             {/* Quick Actions */}
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
