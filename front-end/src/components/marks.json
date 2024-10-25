@@ -1,0 +1,95 @@
+{
+    "students": [
+      {
+        "id": 1,
+        "name": "Alice",
+        "math": 85,
+        "science": 92,
+        "english": 88,
+        "history": 78,
+        "geography": 90
+      },
+      {
+        "id": 2,
+        "name": "Bob",
+        "math": 75,
+        "science": 85,
+        "english": 92,
+        "history": 88,
+        "geography": 85
+      },
+      {
+        "id": 3,
+        "name": "Charlie",
+        "math": 90,
+        "science": 88,
+        "english": 85,
+        "history": 92,
+        "geography": 88
+      },
+      {
+        "id": 4,
+        "name": "David",
+        "math": 82,
+        "science": 78,
+        "english": 90,
+        "history": 85,
+        "geography": 92
+      },
+      {
+        "id": 5,
+        "name": "Eve",
+        "math": 95,
+        "science": 94,
+        "english": 89,
+        "history": 91,
+        "geography": 87
+      },
+      {
+        "id": 6,
+        "name": "Frank",
+        "math": 70,
+        "science": 75,
+        "english": 80,
+        "history": 72,
+        "geography": 78
+      },
+      {
+        "id": 7,
+        "name": "Grace",
+        "math": 88,
+        "science": 87,
+        "english": 91,
+        "history": 84,
+        "geography": 89
+      },
+      {
+        "id": 8,
+        "name": "Henry",
+        "math": 83,
+        "science": 81,
+        "english": 84,
+        "history": 86,
+        "geography": 82
+      },
+      {
+        "id": 9,
+        "name": "Ivy",
+        "math": 91,
+        "science": 90,
+        "english": 88,
+        "history": 89,
+        "geography": 93
+      },
+      {
+        "id": 10,
+        "name": "Jack",
+        "math": 79,
+        "science": 82,
+        "english": 86,
+        "history": 81,
+        "geography": 84
+      }
+    ]
+  }
+  

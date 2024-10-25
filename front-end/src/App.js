@@ -6,6 +6,7 @@ import Navbar from './components/navbar';
 import RegisterPage from './pages/register';
 import LoginPage from './pages/login';
 import Dashboard from './pages/dashboard';
+import  StudentAnalytics from './components/student_analytics';
 import './index.css';
 
 // Protected Route Component
@@ -29,6 +30,7 @@ const App = () => {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/Analytics" element={<StudentAnalytics />} />
               
               {/* Auth Routes */}
               <Route 

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gql, useQuery } from '@apollo/client';
 import { LogOut, BookOpen, Users, Calendar, Clock, Mail, Phone, Home, GraduationCap, Briefcase } from 'lucide-react';
 import DocumentUploadSection from '../components/documentuploadsection';
+import StudentAnalytics from '../components/student_analytics';
 
 
 // GraphQL Queries
@@ -245,6 +246,8 @@ const Dashboard = () => {
                {userType === 'student' && (
               <DocumentUploadSection studentId={userData?.student_id} />
             )}
+
+            
             
             {/* Quick Actions */}
             <div className="bg-white rounded-lg shadow-lg p-6">
@@ -265,6 +268,7 @@ const Dashboard = () => {
                 ))}
               </div>
             </div>
+            <StudentAnalytics />
           </div>
         </div>
       </div>
